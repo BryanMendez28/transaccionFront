@@ -1,0 +1,59 @@
+.tableContainer {
+    max-height: 400px; /* Altura máxima de la tabla */
+    overflow-y: auto;
+ /* Habilitar el scroll vertical */
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse; 
+       max-width: 1200px;
+  }
+  
+  .table th,
+  .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .table th {
+    background-color: #f2f2f2;
+  }
+   /* TablaRegistrosMesActual.css */
+   .totalDataContainer {
+    margin-top: 20px;
+  }
+  
+  .totalDataTable {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+  }
+  
+  .totalDataTable th,
+  .totalDataTable td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+  }
+  
+  /* Estilos para las celdas de encabezado */
+  .totalDataTable th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Estilos para las filas alternas */
+  .totalDataTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Estilos para la celda de resultado */
+  .totalDataTable td {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+
+
+  

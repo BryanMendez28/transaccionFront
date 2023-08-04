@@ -1,38 +1,234 @@
-.App {
+/* Estilos comunes */
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.formContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  width: 70%;
+  margin-bottom: 10px;
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.buttonContainer {
+  display: grid;
+  justify-content: center;
+  align-items: center; /* Centra horizontalmente el botón */
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.resultContainer {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.resultText {
+  font-size: 18px;
+  margin-top: 20px;
+  color: #007BFF;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Estilos para la tabla */
+.tableContainer {
+  margin-top: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+/* Estilos para las celdas de encabezado */
+.table th {
+  background-color: #f2f2f2;
+}
+
+/* Estilos para las filas alternas */
+.table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Estilos para la celda de resultado */
+.resultText {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Media Queries para estilos responsivos */
+
+/* Para pantallas pequeñas, ajustar el ancho de las etiquetas */
+@media (max-width: 600px) {
+  .label {
+    width: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Para pantallas más pequeñas, ajustar el número de columnas en el formulario */
+@media (max-width: 900px) {
+  .formContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.App-link {
-  color: #61dafb;
+/* Para pantallas muy pequeñas, ajustar el número de columnas en el formulario */
+@media (max-width: 400px) {
+  .formContainer {
+    grid-template-columns: 1fr;
+  }
+}
+  
+  /* Estilos para las celdas de encabezado */
+  .totalDataTable th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Estilos para las filas alternas */
+  .totalDataTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Estilos para la celda de resultado */
+  .totalDataTable td {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .tableContainer {
+    max-height: 400px; /* Altura máxima de la tabla */
+    overflow-y: auto;
+ /* Habilitar el scroll vertical */
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse; 
+       max-width: 1200px;
+  }
+  
+  .table th,
+  .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .table th {
+    background-color: #f2f2f2;
+  }
+   /* TablaRegistrosMesActual.css */
+   .totalDataContainer {
+    margin-top: 20px;
+  }
+  
+  .totalDataTable {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+  }
+  
+  .totalDataTable th,
+  .totalDataTable td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+  }
+  /* Estilos para la tabla */
+.tableContainer {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* Estilos para el título de la tabla */
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para el botón de Consultar */
+.buttonContainer {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para el contenedor principal */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
